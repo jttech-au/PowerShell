@@ -1,1 +1,0 @@
-﻿Get-ChildItem Cert:\LocalMachine\My | Format-List -Property Subject, Thumbprint
