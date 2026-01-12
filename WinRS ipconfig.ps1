@@ -1,0 +1,1 @@
+﻿winrs -r:XXXXhv03 ipconfig /all

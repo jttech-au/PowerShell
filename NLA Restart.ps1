@@ -1,0 +1,1 @@
+Invoke-Command -ComputerName XXXXHV02 -ScriptBlock { Restart-Service -Name NlaSvc -Force }

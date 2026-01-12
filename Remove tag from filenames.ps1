@@ -1,0 +1,1 @@
+﻿Get-ChildItem "D:\ftp\Learn Japanese Beginner and Intermediate\*.pdf" -Recurse | Rename-Item -NewName { $_.name -replace “ - busuu“,”” }

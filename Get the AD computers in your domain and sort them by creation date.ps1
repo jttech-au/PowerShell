@@ -1,0 +1,1 @@
+﻿Get-ADComputer -filter * -properties created | select-object name, created | Sort-Object created

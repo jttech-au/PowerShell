@@ -1,0 +1,2 @@
+﻿# Get-ChildItem 'C:\Program Files\Rockstar Games\Grand Theft Auto V\*.rpf' | Get-FileHash -Algorithm MD5
+Get-ChildItem 'C:\Program Files\Rockstar Games\Grand Theft Auto V\update\*.rpf' -Recurse | Get-FileHash -Algorithm MD5
