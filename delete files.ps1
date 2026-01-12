@@ -1,0 +1,2 @@
+Get-ChildItem * -Include *.exe, *.com, *.dll, *.mp* -Recurse | Remove-Item -Force
+Remove-Item -LiteralPath D:\WSUS -Force -Recurse
