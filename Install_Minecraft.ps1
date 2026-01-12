@@ -1,6 +1,6 @@
 ﻿$MC32exe = Test-Path "C:\Program Files (x86)\Microsoft Studios\Minecraft Education Edition\Minecraft.Windows.exe" -PathType Leaf
-$VC2017 = "\\XXXXfs01\Student Public$\eduSTAR\Minecraft\vc_redist.x86.exe"
-$MineCraft = "\\XXXXfs01\Student Public$\eduSTAR\Minecraft\MinecraftEducationEdition_x86_1.12.5.0.msi"
+$VC2017 = "\\SERVER\share$\Minecraft\vc_redist.x86.exe"
+$MineCraft = "\\SERVER\share$\Minecraft\MinecraftEducationEdition_x86_1.12.5.0.msi"
 
 $MineCraftArgs = @(
     "/i"

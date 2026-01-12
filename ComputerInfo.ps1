@@ -10,7 +10,7 @@ $biosDate = $bios.ConvertToDateTime($bios.ReleaseDate).ToString('dd-MM-yyy')
 
 # Where file is saved. 
 # Change path
-$ScriptFile = "\\XXXXhv01\Student Public$\Audit\Computers.csv"
+$ScriptFile = "\\SERVER\share$\Audit\Computers.csv"
 
 # Test if file exists
 $FileExists = Test-Path $ScriptFile

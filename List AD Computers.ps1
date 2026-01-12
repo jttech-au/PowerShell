@@ -23,7 +23,7 @@ ForEach($Computer in $Computers)
     }
 
 ##############################################################################################
-$OU = "OU=Computers,OU=Primary School,DC=curric,DC=school-ps,DC=wan"
+$OU = "OU=Computers,OU=SchoolName,DC=subdomain,DC=example,DC=com,DC=au"
 
 $Computers = (Get-ADComputer -Filter { Name -notlike 'DT*' } -SearchBase $OU ).Name
 # $Computers = Get-ADComputer -Filter '*' -SearchBase "OU=1 to 1 Computers,OU=Computers,OU=Mount Clear Primary School,DC=curric,DC=mount-clear-ps,DC=wan"
@@ -53,7 +53,7 @@ ForEach($Computer in $Computers)
     }
 
 ##############################################################################################
-$OU = 'OU=Portable,OU=Computers Managed,OU=LAL LAL PRIMARY SCHOOL,DC=curric,DC=lal-lal-ps,DC=wan'
+$OU = 'OU=Portable,OU=Computers Managed,OU=SchoolName,DC=subdomain,DC=example,DC=com,DC=au'
 
 Get-ADComputer -Filter { OperatingSystem -Like '*Windows 7*' } -SearchBase $OU  -Properties OperatingSystem | Select-Object Name, distinguishedname,DNSHostName, OperatingSystem | Format-Table -AutoSize
 # Get-ADComputer -Filter { OperatingSystem -Like '*Windows 7*' } -SearchBase $OU  -Properties OperatingSystem | Stop-Computer

@@ -2,5 +2,5 @@
 # gMSABackupDCs
 $gMSAName = 'veeam-gMSA'
 $gMSAGroupName = 'gMSABackupDCs'
-$gMSADNSHostName = 'veeam-gMSA.curric.school-co.wan'
+$gMSADNSHostName = 'veeam-gMSA.subdomain.example.com.au'
 New-ADServiceAccount -Name $gMSAName -DNSHostName $gMSADNSHostName -PrincipalsAllowedToRetrieveManagedPassword $gMSAGroupName -Enabled $True

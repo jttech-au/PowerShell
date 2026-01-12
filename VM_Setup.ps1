@@ -1,5 +1,5 @@
 ﻿# Set VM Name, Switch Name, and Installation Media Path.
-$Server = @("1436DC01","1436DC02", "1436FS01", "1436PS01", "1436DS01")
+$Server = @("DC01","DC02", "FS01", "PS01", "DS01")
 $VMRoot = 'D:\Virtual Machines\'
 $InstallMedia = 'D:\ISO\SW_DVD9_Win_Server_STD_CORE_2019_1809.1_64Bit_English_DC_STD_MLF_X22-02970.ISO'
 $Switch = 'Ext'
@@ -93,7 +93,7 @@ foreach ($VM in $Server)
     $VMSmartPaging = "D:\Virtual Machines\$VM\Smart Paging"
 
     Set-VM -Name $VM -ProcessorCount $vCPU -DynamicMemory -MemoryMinimumBytes $MinMemory -MemoryStartupBytes $StartupMemory  -AutomaticStartAction $AutoStartAction -AutomaticStartDelay $AutoStartDelay -AutomaticStopAction $AutoStopAction -SnapshotFileLocation $VMSnapshots -SmartPagingFilePath $VMSmartPaging
-    If ($VM -eq "1436DC01" -or $VM -eq "1436DC02")
+    If ($VM -eq "DC01" -or $VM -eq "DC02")
         {
         Set-VM -Name $VM -AutomaticStartDelay 0
         }

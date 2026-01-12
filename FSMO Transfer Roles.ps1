@@ -6,7 +6,7 @@
 #
 # Transfer roles
 #
-$DC = "0755DC01"
+$DC = "DC01"
 # Transfer PDCEmulator
 Move-ADDirectoryServerOperationMasterRole -Identity $DC PDCEmulator
 # Transfer RIDMaster

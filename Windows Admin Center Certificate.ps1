@@ -1,6 +1,6 @@
 # Create cert (10 years)
 New-SelfSignedCertificate `
--DnsName "wac.school-co.wan" `
+-DnsName "wac.subdomain.example.com.au" `
 -KeyAlgorithm "ECDSA_nistP384" `
 -KeyExportPolicy "Exportable" `
 -CertStoreLocation "Cert:\LocalMachine\My" `
@@ -8,7 +8,7 @@ New-SelfSignedCertificate `
 
 Get-ChildItem Cert:\LocalMachine\My
 
-4B5E6662441EE2C027888F4611A7465E933FA9DD  CN=wac.curric.school-co.wan
+4B5E6662441EE2C027888F4611A7465E933FA9DD  CN=wac.subdomain.example.com.au
 
 Change perms
 $ObjCert = Get-ChildItem Cert:\LocalMachine\My\4B5E6662441EE2C027888F4611A7465E933FA9DD
@@ -21,7 +21,7 @@ icacls $filePath
 
 Export
 $ObjCert = Get-ChildItem Cert:\LocalMachine\My\4B5E6662441EE2C027888F4611A7465E933FA9DD
-Export-Certificate -Cert $ObjCert -FilePath "$env:USERPROFILE\desktop\wac.curric.school-co.wan.cer"
+Export-Certificate -Cert $ObjCert -FilePath "$env:USERPROFILE\desktop\wac.subdomain.example.com.au.cer"
 
 Import to trusted store
-Import-Certificate -FilePath "$env:USERPROFILE\desktop\wac.curric.school-co.wan.cer" -CertStoreLocation "Cert:\LocalMachine\Root"
+Import-Certificate -FilePath "$env:USERPROFILE\desktop\wac.subdomain.example.com.au.cer" -CertStoreLocation "Cert:\LocalMachine\Root"

@@ -1,5 +1,5 @@
 # v1
-$user ="user@email.com"
+$user ="user@subdomain.example.com.au"
 $pass = ConvertTo-SecureString -String "" -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential $user, $pass
 
@@ -9,8 +9,8 @@ $cred = New-Object System.Management.Automation.PSCredential $user, $pass
 $BackupLog = "C:\Intel\Logs\IntelGFX.log"
 
 
-$From = "from@email.com"
-$To = "to@email.com"
+$From = "from@subdomain.example.com.au"
+$To = "to@subdomain.example.com.au"
 $Subject = "School Backup"
 $Body = "Backup has finished"
 $Attachment = $BackupLog

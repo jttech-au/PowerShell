@@ -1,5 +1,5 @@
 ﻿Import-Module ActiveDirectory
-$OU = "OU=Inactive,OU=Name Primary School,DC=curric,DC=schoolname-ps,DC=wan"
+$OU = "OU=Inactive,OU=SchoolName,DC=subdomain,DC=example,DC=com,DC=au"
 $Users = Get-ADUser -Filter * -SearchBase $OU -Properties sAMAccountName
 
 foreach ($User in $Users)

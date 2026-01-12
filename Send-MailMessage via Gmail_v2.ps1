@@ -6,7 +6,7 @@
 # powershell pathtoscript.ps1
 
 
-$user ="user@email.com"
+$user ="user@subdomain.example.com.au"
 $pass = Get-Content C:\Intel\pass.txt | ConvertTo-SecureString
 $cred = New-Object System.Management.Automation.PSCredential $user, $pass
 
@@ -21,8 +21,8 @@ See attachment for backup log.
 "@
 
 $Param = @{
-    To = "to@email.com"
-    From = "from@email.com"
+    To = "to@subdomain.example.com.au"
+    From = "from@subdomain.example.com.au"
     Subject = "School Backup"
     Body = $Body
     Attachment = $BackupLog

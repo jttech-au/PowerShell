@@ -3,5 +3,5 @@ $AB = $ABTutor.VersionInfo.FileVersion
 
 If ($AB -lt "8,1,18,10669")
 {
-msiexec.exe /i "\\XXXXds01\sdp$\AB Tutor\ABTutorSetup.ClientOnly8.1.18.msi" /qn
+msiexec.exe /i "\\SERVER\sdp$\AB Tutor\ABTutorSetup.ClientOnly8.1.18.msi" /qn
 }

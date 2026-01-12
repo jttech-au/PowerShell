@@ -6,8 +6,4 @@ $time = (Get-Date).Adddays(-($DaysInactive))
 
 #Get-ADComputer -Filter {LastLogonTimeStamp -lt $time} -Properties LastLogonTimeStamp | Format-Table -Property Name
 
-Get-ADComputer -Filter {LastLogonTimeStamp -lt $time} -Properties LastLogonTimeStamp | Move-ADObject -TargetPath "OU=Inactive,OU=Computers,OU=Primary School,DC=curric,DC=school-ps,DC=wan"
-
-
-
-
+Get-ADComputer -Filter {LastLogonTimeStamp -lt $time} -Properties LastLogonTimeStamp | Move-ADObject -TargetPath "OU=Inactive,OU=Computers,OU=SchoolName,DC=subdomain,DC=example,DC=com,DC=au"

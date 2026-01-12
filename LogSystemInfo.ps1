@@ -3,7 +3,7 @@ v1.0
 Log user accounts to allocated computers.
 #>
 
-$LogFile = "\\Server\Share\Logs\LogSystemInfo.txt"
+$LogFile = "\\Server\Share$\Logs\LogSystemInfo.txt"
 $Username = $env:USERNAME
 $ComputerName = $env:COMPUTERNAME
 $ComputerModel = Get-WmiObject Win32_ComputerSystem | Select-Object -ExpandProperty Model

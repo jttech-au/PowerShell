@@ -1,8 +1,8 @@
 ﻿$DaysInactive = 365 
 $time = (Get-Date).Adddays(-($DaysInactive))
 
-$OU = "OU=Accounts,OU=Primary School,DC=curric,DC=school-ps,DC=wan"
-$OUInactive = "OU=Inactive,OU=Primary School,DC=curric,DC=school-ps,DC=wan"
+$OU = "OU=Accounts,OU=SchoolName,DC=subdomain,DC=example,DC=com,DC=au"
+$OUInactive = "OU=Inactive,OU=SchoolName,DC=subdomain,DC=example,DC=com,DC=au"
 
 Get-ADUser -SearchScope Subtree -SearchBase  $OU -Properties LastLogonTimestamp, PwdLastSet `
 -filter {(LastLogonTimeStamp -lt $time -or LastLogonTimeStamp -notlike "*") -and (pwdlastset -lt $time -or pwdlastset -eq 0)} `

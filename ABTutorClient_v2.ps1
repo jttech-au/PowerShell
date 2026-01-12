@@ -9,7 +9,7 @@ If ($ABTutor64)
         If ($AB64 -lt "8,2,2,11006")
         {
             Write-Host "Updating ABtutor 64" -ForegroundColor Green
-            msiexec.exe /i "\\curric.school-ps.wan\NETLOGON\ABTutor\ABTutorSetup.ClientOnly8.2.2.msi" /qn
+            msiexec.exe /i "\\subdomain.example.com.au\NETLOGON\ABTutor\ABTutorSetup.ClientOnly8.2.2.msi" /qn
         }
     }
 ElseIf ($ABTutor32)
@@ -20,11 +20,11 @@ ElseIf ($ABTutor32)
         If ($AB32 -lt "8,2,2,11006")
         {
             Write-Host "Updating ABTutor 32" -ForegroundColor Green
-            msiexec.exe /i "\\curric.school.wan\NETLOGON\ABTutor\ABTutorSetup.ClientOnly8.2.2.msi" /qn
+            msiexec.exe /i "\\subdomain.example.com.au\NETLOGON\ABTutor\ABTutorSetup.ClientOnly8.2.2.msi" /qn
         }
     }
 Else
     {
         Write-Host "Installing ABTutor" -ForegroundColor Green
-        msiexec.exe /i "\\curric.school-ps.wan\NETLOGON\ABTutor\ABTutorSetup.ClientOnly8.2.2.msi" /qn
+        msiexec.exe /i "\\subdomain.example.com.au\NETLOGON\ABTutor\ABTutorSetup.ClientOnly8.2.2.msi" /qn
     }

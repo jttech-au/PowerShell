@@ -1,4 +1,7 @@
-﻿$sourcePath = "\\172.16.100.15\Media\Movies"
+﻿# Checks file name and creates folder
+# moves files into folder
+
+$sourcePath = "\\SERVER\Media\Movies"
 
 # Get all files in the directory
 Get-ChildItem -Path $sourcePath -File | ForEach-Object {

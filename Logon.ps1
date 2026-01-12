@@ -3,7 +3,7 @@ $computer = $env:computername
 $username = $env:username
 
 $date = Get-Date -format MM-yyyy
-$filename = "\\XXXXhv01\Staff public$\ICT\ComputerLogon\$date.txt"
+$filename = "\\SERVER\share$\ComputerLogon\$date.txt"
 
 $Logon = $computer + ", " + $username 
 

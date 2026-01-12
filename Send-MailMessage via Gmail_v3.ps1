@@ -15,7 +15,7 @@ $string2 = "completed successfully"
 $string3 = "Error"
 $result = get-content $BackupLog | select-string -pattern $string1,$string2,$string3 | Select-Object -Last 5
 
-$user ="user@email.com"
+$user ="user@subdomain.example.com.au"
 $pass = Get-Content D:\Backup\pass.txt | ConvertTo-SecureString
 $cred = New-Object System.Management.Automation.PSCredential $user, $pass
 
@@ -30,9 +30,9 @@ See attachment for backup log.
 "@
 
 $Param = @{
-    To = "to@email.com"
-    From = "from@email.com"
-    Subject = "School Backup"
+    To = "to@subdomain.example.com.au"
+    From = "from@subdomain.example.com.au"
+    Subject = "Backup"
     Body = $Body
     Attachment = $BackupLog
     SMTPServer = "smtp.gmail.com"

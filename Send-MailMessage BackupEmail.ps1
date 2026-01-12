@@ -8,18 +8,18 @@ $string2 = "completed successfully"
 $string3 = "Error"
 $result = get-content $BackupLog | select-string -pattern $string1,$string2,$string3 | Select-Object -Last 5
 
-$From = "from@email.com"
-$To = "to@email.com"
+$From = "from@subdomain.example.com.au"
+$To = "to@subdomain.example.com.au"
 $Attachment = $BackupLog
-$Subject = "Primary School"
+$Subject = "Backup"
 $Body = @"
-MPPS Backup has finished.
+Backup has finished.
 
 $result
 
 
 "@
-$SMTPServer = "smtp.email.com"
+$SMTPServer = "smtp.subdomain.example.com.au"
 $SMTPPort = "25"
 
 Send-MailMessage -From $From -to $To -Subject $Subject `

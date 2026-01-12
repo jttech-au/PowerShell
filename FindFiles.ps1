@@ -4,16 +4,16 @@
 #
 ######################################################
 $FileTypes = @("*.jpg","*.mov","*.mp4","*.avi","*.wmv","*.vob")
-$FolderPath = @("\\XXXXhv01\Staff Public$","\\XXXXHV01\Student Public$","\\XXXXhv01\Student Users$","\\XXXXhv01\Staff Users$")
+$FolderPath = @("\\SERVER\Staff Public$","\\SERVER\Student Public$","\\SERVER\Student Users$","\\SERVER\Staff Users$")
 
 foreach ($fp in $FolderPath)
     {
     Switch ($fp)
         {
-        "\\XXXXhv01\Staff Public$" { $Drive = "T Drive" }
-        "\\XXXXHV01\Student Public$" { $Drive = "S Drive" }
-        "\\XXXXhv01\Student Users$" { $Drive = "Student Users" }
-        "\\XXXXhv01\Staff Users$" { $Drive = "Staff Users" }
+        "\\SERVER\Staff Public$" { $Drive = "T Drive" }
+        "\\SERVER\Student Public$" { $Drive = "S Drive" }
+        "\\SERVER\Student Users$" { $Drive = "Student Users" }
+        "\\SERVER\Staff Users$" { $Drive = "Staff Users" }
         Default { 'unable to determine value of $FolderPath' }
         }
         foreach ( $file in $FileTypes)
